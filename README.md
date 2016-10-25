@@ -9,6 +9,13 @@ Flask boilerplate to create projects with the idea of pluggable blueprints.
 pip install blueflask
 ```
 
+## Usage
+
+The following command allows you to create a new app:
+
+```
+blueflask newapp <APP_NAME> <OPTIONAL_DEST_DIRECTORY>
+```
 
 ## Tutorial
 
@@ -16,7 +23,7 @@ Let's assume that we are going to start a project called *bluedemo*. Execute
 on your terminal:
 
 ```
-blueflask new bluedemo
+blueflask newapp bluedemo
 ```
 
 This will create a directory with the name of the project and define a basic
