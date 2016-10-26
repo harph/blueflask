@@ -15,13 +15,16 @@ test_requirements = [
 
 setup(
     name='blueflask',
-    version='0.1.1',
+    version='0.1.2',
     description="Flask boilerplate to create an application with the idea of pluggable blueprints.",
     author="Harrington Joseph",
     author_email='hello@hjoseph.com',
     url='https://github.com/harph/blueflask',
     packages=[
         'blueflask',
+        'blueflask.templates',
+        'blueflask.templates.app_template',
+        'blueflask.templates.app_template.app',
     ],
     package_dir={'blueflask':
                  'blueflask'},
