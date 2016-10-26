@@ -3,7 +3,7 @@
 
 from setuptools import setup
 
-with open('README.md') as readme_file:
+with open('README.rst') as readme_file:
     readme = readme_file.read()
 
 with open('requirements.txt') as requirements_file:
@@ -15,7 +15,7 @@ test_requirements = [
 
 setup(
     name='blueflask',
-    version='0.1.0',
+    version='0.1.1',
     description="Flask boilerplate to create an application with the idea of pluggable blueprints.",
     author="Harrington Joseph",
     author_email='hello@hjoseph.com',
