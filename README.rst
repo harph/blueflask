@@ -60,14 +60,6 @@ the server:
 
     python run.py
 
-
-Or you can run it as an executable file:
-
-.. code-block::
-
-    ./run.py
-
-
 Or you can execute one of the Flask standard ways to run the application:
 
 .. code-block::

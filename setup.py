@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+import os
 from setuptools import setup
 
 with open('README.rst') as readme_file:
@@ -13,21 +13,33 @@ test_requirements = [
     # TODO: put package test requirements here
 ]
 
+
+base_path = os.path.abspath(os.path.join(os.path.dirname(__file__),
+                            'blueflask'))
+templates_path = os.path.join(base_path, 'templates')
+package_data = []
+
+for topdir, _, files in os.walk(templates_path):
+    for f in files:
+        if f.startswith('.') or f.endswith('.pyc'):
+            continue
+        package_data.append(os.path.join(topdir, f))
+
 setup(
     name='blueflask',
-    version='0.1.2',
+    version='0.1.3',
     description="Flask boilerplate to create an application with the idea of pluggable blueprints.",
     author="Harrington Joseph",
     author_email='hello@hjoseph.com',
     url='https://github.com/harph/blueflask',
     packages=[
         'blueflask',
-        'blueflask.templates',
-        'blueflask.templates.app_template',
-        'blueflask.templates.app_template.app',
     ],
     package_dir={'blueflask':
                  'blueflask'},
+    package_data={
+        'blueflask': package_data
+    },
     entry_points={
         'console_scripts': [
             'blueflask=blueflask.cli:main'
